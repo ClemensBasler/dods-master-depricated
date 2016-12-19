@@ -1,3 +1,14 @@
 <h1>
   {{title}}
 </h1>
+<input type="number" placeholder="Seitenzahl" (keyup)="onKey($event)"> /
+<input type="number" placeholder="TaW Lesen/Schreiben" (keyup)="onKey2($event)"> /
+
+<select [(ngModel)]="selectedBook" (ngModelChange)="onChange($event)" >
+  <option *ngFor="let c of books" [ngValue]="c.value"> {{c.name}} </option>
+</select>
+
+{{output}} in Stunden
+
+<!-- {{model.zeit}} -->
+{{zeit}}
