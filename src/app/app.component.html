@@ -1,14 +1,30 @@
 <h1>
-  {{title}}
+  Dods Master
 </h1>
-<input type="number" placeholder="Seitenzahl" (keyup)="onKey($event)"> /
-<input type="number" placeholder="TaW Lesen/Schreiben" (keyup)="onKey2($event)"> /
 
-<select [(ngModel)]="selectedBook" (ngModelChange)="onChange($event)" >
+<h2>Buchrechner</h2>
+
+Anzahl der Seiten:
+<input type="number" placeholder="Seitenzahl" (keyup)="onKey($event)"> <br>
+
+TaW Lesen und Schreiben:
+<input type="number" placeholder="TaW Lesen/Schreiben" (keyup)="onKey2($event)"> <br>
+
+Buchart:
+<select [(ngModel)]="selectedBook" value="selectedBook" (ngModelChange)="onChange($event)" >
   <option *ngFor="let c of books" [ngValue]="c.value"> {{c.name}} </option>
+</select> <br>
+
+Punkte unter halber Komplexität der Sprache:
+<input type="number" placeholder="Punkte unterhalb" (keyup)="onKey3($event)"> <br>
+
+Lesezeit: {{output}} Stunden
+
+
+<h2>Datumsrechner</h2>
+
+<input type="number" value="1">
+<select [(ngModel)]="selectedMonth" >
+  <option *ngFor="let m of zgMonth"> {{m}} </option>
 </select>
-
-{{output}} in Stunden
-
-<!-- {{model.zeit}} -->
-{{zeit}}
+<input type="number" value="1000">
