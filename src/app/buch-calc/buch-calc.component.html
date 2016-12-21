@@ -1,0 +1,17 @@
+<h2>Buchrechner</h2>
+
+Anzahl der Seiten:
+<input type="number" placeholder="Seitenzahl" (keyup)="onKey($event)"> <br>
+
+TaW Lesen und Schreiben:
+<input type="number" placeholder="TaW Lesen/Schreiben" (keyup)="onKey2($event)"> <br>
+
+Buchart:
+<select [(ngModel)]="selectedBook" value="selectedBook" (ngModelChange)="onChange($event)" >
+  <option *ngFor="let c of books" [ngValue]="c.value"> {{c.name}} </option>
+</select> <br>
+
+Punkte unter halber Komplexität der Sprache:
+<input type="number" placeholder="Punkte unterhalb" required="true" (keyup)="onKey3($event)"> <br>
+
+Lesezeit: {{output}} Stunden

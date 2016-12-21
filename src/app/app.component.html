@@ -1,33 +1,7 @@
 <h1>
   Dods Master
 </h1>
-
-<h2>Buchrechner</h2>
-
-Anzahl der Seiten:
-<input type="number" placeholder="Seitenzahl" (keyup)="onKey($event)"> <br>
-
-TaW Lesen und Schreiben:
-<input type="number" placeholder="TaW Lesen/Schreiben" (keyup)="onKey2($event)"> <br>
-
-Buchart:
-<select [(ngModel)]="selectedBook" value="selectedBook" (ngModelChange)="onChange($event)" >
-  <option *ngFor="let c of books" [ngValue]="c.value"> {{c.name}} </option>
-</select> <br>
-
-Punkte unter halber Komplexität der Sprache:
-<input type="number" placeholder="Punkte unterhalb" (keyup)="onKey3($event)"> <br>
-
-Lesezeit: {{output}} Stunden
-
-
-<h2>Datumsrechner</h2>
-
-<input type="number" min="1" max="30" value="1" (keyup)="onKey4($event)">
-
-<select [(ngModel)]="selectedMonth" value="selectedMonth" (ngModelChange)="onKey6($event)">
-  <option *ngFor="let m of zgMonth" [ngValue]="m.value"> {{m.name}} </option>
-</select>
-
-<input type="number" value="1000" (keyup)="onKey5($event)">
-{{outputDay}}
+<a routerLink="/" routerLinkActive="active">Home</a>
+<a routerLink="/dateCalc" routerLinkActive="active">Book Calculator</a>
+<a routerLink="/buchCalc" routerLinkActive="active">Date Converter</a>
+<router-outlet></router-outlet>
