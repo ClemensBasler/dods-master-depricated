@@ -42,18 +42,18 @@ export class AppComponent {
 
   zgDay = [ "Windstag (1)", "Erdstag (2)", "Markttag (3)", "Praiostag (4)", "Rohalstag (5)", "Feuertag (6)", "Wassertag (7)"];
   zgMonth = [{name: "Praios (1)", value: "1"},
-              {name: "Rondra (2)", value: "2"},
-              {name: "Efferd (3)", value: "3"},
-              {name: "Travia (4)", value: "4"},
-              {name: "Boron (5)", value: "5"},
-              {name: "Hesinde (6)", value: "6"},
-              {name: "Firun (7)", value: "7"},
-              {name: "Tsa (8)", value: "8"},
-              {name: "Phex (9)", value: "9"},
-              {name: "Peraine (10)", value: "10"},
-              {name: "Ingerimm (11)", value: "11"},
-              {name: "Rahja (12)", value: "12"},
-              {name: "namenloser Tag (13)", value: "13"}];
+             {name: "Rondra (2)", value: "2"},
+             {name: "Efferd (3)", value: "3"},
+             {name: "Travia (4)", value: "4"},
+             {name: "Boron (5)", value: "5"},
+             {name: "Hesinde (6)", value: "6"},
+             {name: "Firun (7)", value: "7"},
+             {name: "Tsa (8)", value: "8"},
+             {name: "Phex (9)", value: "9"},
+             {name: "Peraine (10)", value: "10"},
+             {name: "Ingerimm (11)", value: "11"},
+             {name: "Rahja (12)", value: "12"},
+             {name: "namenloser Tag (13)", value: "13"}];
 
   selectedMonth = this.zgMonth[0];
 
