@@ -23,8 +23,11 @@ Lesezeit: {{output}} Stunden
 
 <h2>Datumsrechner</h2>
 
-<input type="number" value="1">
-<select [(ngModel)]="selectedMonth" >
-  <option *ngFor="let m of zgMonth"> {{m}} </option>
+<input type="number" min="1" max="30" value="1" (keyup)="onKey4($event)">
+
+<select [(ngModel)]="selectedMonth" value="selectedMonth" (ngModelChange)="onKey6($event)">
+  <option *ngFor="let m of zgMonth" [ngValue]="m.value"> {{m.name}} </option>
 </select>
-<input type="number" value="1000">
+
+<input type="number" value="1000" (keyup)="onKey5($event)">
+{{outputDay}}
