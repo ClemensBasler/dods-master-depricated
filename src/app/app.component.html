@@ -1,7 +1,17 @@
 <h1>
   Dods Master
 </h1>
-<a routerLink="/" routerLinkActive="active">Home</a>
-<a routerLink="/dateCalc" routerLinkActive="active">Book Calculator</a>
-<a routerLink="/buchCalc" routerLinkActive="active">Date Converter</a>
+<ul class="nav nav-tabs nav-justified">
+  <li role="presentation" routerLinkActive="active"><a routerLink="/home">
+    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+    Home</a></li>
+  <li role="presentation" routerLinkActive="active"><a routerLink="/dateCalc">
+    <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+    Date Converter</a></li>
+  <li role="presentation" routerLinkActive="active"><a routerLink="/buchCalc">
+    <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+    Book Calculator</a></li>
+  <li role="presentation" routerLinkActive="active"><a routerLink="/dropdown" >dropdown</a></li>
+</ul>
+
 <router-outlet></router-outlet>

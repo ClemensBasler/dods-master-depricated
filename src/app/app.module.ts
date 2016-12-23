@@ -9,11 +9,15 @@ import { DateCalculatorComponent } from './date-calculator/date-calculator.compo
 import { BuchCalcComponent } from './buch-calc/buch-calc.component';
 import { HomeComponent } from './home/home.component';
 
-import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { AlertModule } from 'ng2-bootstrap';
+import { DropdownComponent } from './dropdown/dropdown.component';
+import { DropdownModule } from 'ng2-bootstrap/dropdown';
 
 const appRoutes: Routes = [
   { path: 'dateCalc', component: DateCalculatorComponent },
   { path: 'buchCalc', component: BuchCalcComponent },
+  { path: 'dropdown', component: DropdownComponent},
+  { path: 'home', component: HomeComponent},
   { path: '', component: HomeComponent }
 ];
 
@@ -22,14 +26,16 @@ const appRoutes: Routes = [
     AppComponent,
     DateCalculatorComponent,
     BuchCalcComponent,
-    HomeComponent
+    HomeComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    DropdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
