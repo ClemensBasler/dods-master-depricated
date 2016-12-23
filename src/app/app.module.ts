@@ -9,6 +9,8 @@ import { DateCalculatorComponent } from './date-calculator/date-calculator.compo
 import { BuchCalcComponent } from './buch-calc/buch-calc.component';
 import { HomeComponent } from './home/home.component';
 
+import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
+
 const appRoutes: Routes = [
   { path: 'dateCalc', component: DateCalculatorComponent },
   { path: 'buchCalc', component: BuchCalcComponent },
@@ -26,7 +28,8 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AlertModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
