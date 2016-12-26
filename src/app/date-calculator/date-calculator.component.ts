@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './date-calculator.component.html',
   styleUrls: ['./date-calculator.component.css']
 })
-export class DateCalculatorComponent implements OnInit {
+export class DateCalculatorComponent {
   zgDay = [ "Windstag (1)", "Erdstag (2)", "Markttag (3)", "Praiostag (4)", "Rohalstag (5)", "Feuertag (6)", "Wassertag (7)"];
   zgMonth = [{name: "Praios (1)", value: "1"},
              {name: "Rondra (2)", value: "2"},
@@ -54,10 +54,5 @@ export class DateCalculatorComponent implements OnInit {
   //1.1.1001 => Praiostag
   //1 + (1-1)*30 + 365*1000 = 365.001%7=0 => 3
   //1 + (2-1)*30 + 365*1000 = 365.031 => 5
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }

@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './buch-calc.component.html',
   styleUrls: ['./buch-calc.component.css']
 })
-export class BuchCalcComponent implements OnInit {
+export class BuchCalcComponent {
 
   seitenzahl = 0;
   tawLesenSchreiben = 0;
@@ -39,10 +39,6 @@ export class BuchCalcComponent implements OnInit {
 
   calcOutput(){
     this.output = (this.seitenzahl / this.taw / this.multi) * Math.pow(2, this.punkteUnterhalb);
-  }
-  constructor() { }
-
-  ngOnInit() {
   }
 
 }
