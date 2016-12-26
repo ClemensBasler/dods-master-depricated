@@ -5,8 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './date-calculator.component.html',
   styleUrls: ['./date-calculator.component.css']
 })
+
 export class DateCalculatorComponent {
-  zgDay = [ "Windstag (1)", "Erdstag (2)", "Markttag (3)", "Praiostag (4)", "Rohalstag (5)", "Feuertag (6)", "Wassertag (7)"];
+  zgDay = [ "Windstag (1)", "Erdstag (2)", "Markttag (3)",
+            "Praiostag (4)", "Rohalstag (5)", "Feuertag (6)", "Wassertag (7)"];
+
   zgMonth = [{name: "Praios (1)", value: "1"},
              {name: "Rondra (2)", value: "2"},
              {name: "Efferd (3)", value: "3"},
@@ -21,13 +24,12 @@ export class DateCalculatorComponent {
              {name: "Rahja (12)", value: "12"},
              {name: "namenloser Tag (13)", value: "13"}];
 
-  selectedMonth = this.zgMonth[0];
+  selectedMonth = this.zgMonth[0].name;
 
   day = 1;
   month = 0;
   year = 1000;
   outputDay = "lul";
-
 
   onKey4(event:any){
     this.day = parseInt(event.target.value);

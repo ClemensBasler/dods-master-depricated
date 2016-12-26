@@ -4,7 +4,7 @@
 
 <input type="number" min="1" max="30" value="1" (keyup)="onKey4($event)">
 
-<select [(ngModel)]="selectedMonth" value="selectedMonth" (ngModelChange)="onKey6($event)">
+<select [(ngModel)]="selectedMonth" (ngModelChange)="onKey6($event)">
   <option *ngFor="let m of zgMonth" [ngValue]="m.value"> {{m.name}} </option>
 </select>
 
