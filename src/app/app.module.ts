@@ -5,25 +5,25 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { DateCalculatorComponent } from './date-calculator/date-calculator.component';
+import { DateCalculatorComponent } from './components/routing_components/dsa/date-calculator/date-calculator.component';
 import { BuchCalcComponent } from './buch-calc/buch-calc.component';
-import { HomeComponent } from './home/home.component';
+import { DSAHomeComponent } from './components/routing_components/dsa/dsa-home/dsa-home.component';
 
 import { AlertModule } from 'ng2-bootstrap';
-import { DropdownComponent } from './dropdown/dropdown.component';
+import { DropdownComponent } from './components/routing_components/dsa/dropdown/dropdown.component';
 import { DropdownModule } from 'ng2-bootstrap/dropdown';
 import { HeaderComponent } from './components/util_components/header/header.component';
-import { DsaHeaderComponent } from './components/routing_components/dsa-page/dsa-header/dsa-header.component';
-import { Home2Component } from './components/routing_components/home2/home2.component';
+import { DsaHeaderComponent } from './components/routing_components/dsa/dsa-header/dsa-header.component';
+import { HomeComponent } from './components/routing_components/home/home.component';
 
 const appRoutes: Routes = [
-  { path: 'dsa/dateCalc', component: DateCalculatorComponent },
+  { path: 'dateCalc', component: DateCalculatorComponent },
   { path: 'buchCalc', component: BuchCalcComponent },
   { path: 'dropdown', component: DropdownComponent},
   { path: 'home', component: HomeComponent},
-  { path: 'dsa', component: HomeComponent },
-  { path: 'home2', component: Home2Component },
-  { path: '', component: Home2Component }
+  { path: 'dsa', component: DSAHomeComponent },
+  { path: 'dsa-home', component: DSAHomeComponent },
+  { path: '', component: HomeComponent }
 ];
 
 @NgModule({
@@ -35,7 +35,7 @@ const appRoutes: Routes = [
     DropdownComponent,
     HeaderComponent,
     DsaHeaderComponent,
-    Home2Component
+    DSAHomeComponent
   ],
   imports: [
     BrowserModule,
